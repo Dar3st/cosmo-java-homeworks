@@ -11,5 +11,22 @@ public class ExG {
     public static void main(String[] args) {
         String input = "Где мои деньги?";
 
+
+        String cleanedInput = input.replace("?", "").trim();
+        String[] words = cleanedInput.split(" ");
+
+
+        StringBuilder resultBuilder = new StringBuilder();
+        for (int i = words.length - 1; i >= 0; i--) {
+            resultBuilder.append(words[i]);
+            if (i > 0) {
+                resultBuilder.append(" ");
+            }
+        }
+
+        String result = resultBuilder.toString().replaceFirst("д", "Д").replace("Г", "г") + "?";
+
+        System.out.println("Исходная строка: " + input);
+        System.out.println("Результат: " + result);
     }
 }

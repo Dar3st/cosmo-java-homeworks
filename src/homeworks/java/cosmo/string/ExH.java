@@ -10,6 +10,13 @@ package homeworks.java.cosmo.string;
 public class ExH {
     public static void main(String[] args) {
         String fullName = "Носов Алексей Олегович";
+        String[] splitName = fullName.split(" ");
 
+        StringBuilder sb = new StringBuilder();
+
+        for(int i = 0; i < splitName.length; i++){
+            sb.append(splitName[i].charAt(0)).append(".");
+        }
+        System.out.println(sb);
     }
 }

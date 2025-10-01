@@ -10,6 +10,7 @@ package homeworks.java.cosmo.string;
 public class ExA {
     public static void main(String[] args) {
         String input = "Мама мыла Милу мылом!";
-
+        // решение
+        System.out.println(input.replace(" ", ""));
     }
 }
